@@ -1,20 +1,17 @@
 import os
 
-DEVELOPMENT = "development"
-PRODUCTION = "production"
-STAGING = "staging"
-CODE_SPACE = "code_space"
-LOCAL = "local"
+father = "Ravi kumar"
+Mother = "Sreeja C G"
+Son = "Akhil R S"
+Wife = "Soubhagya M"
 
-current_env = os.environ.get("ENV_NAME", DEVELOPMENT)
+Input_var = os.environ.get("input", Son)
 
-if current_env == DEVELOPMENT:
-    print("Development environment")
-elif current_env == PRODUCTION:
-    print("Production environment")
-elif current_env == STAGING:
-    print("Staging environment")
-elif current_env in [CODE_SPACE, LOCAL]:
-    print("Codespace or local environment")
+if Input_var == Son:
+  print("Akhil is your Son")
+elif Input_var == father:
+  print("Ravikumar is ",father)
+elif Input_var in [Wife,Mother]:
+  print(Mother," or ",Wife)
 else:
-    print("Unknown environment")
+  print("Error in Input")
